@@ -1,0 +1,127 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.3.1
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 100
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/TernaryParentheses:
+  Enabled: false
+
+Style/CommentedKeyword:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/RedundantArgument:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/DuplicateAssociation:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/TrailingEmptyLines:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 170
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Enabled: false
+
+Lint/RedundantCopDisableDirective:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false

@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  timeout: 5000
+  encoding: utf8
+  reconnect: false
+  database: reports2024_development
+  pool: 10
+  username: reports2024
+  password: reports2024
+  host: 127.0.0.1
+  port: 5432
+
+test:
+  adapter: postgresql
+  timeout: 5000
+  encoding: utf8
+  reconnect: false
+  database: reports2024_test
+  pool: 10
+  username: reports2024
+  password: reports2024
+  host: 127.0.0.1
+  port: 5432
