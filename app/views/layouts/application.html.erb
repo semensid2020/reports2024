@@ -11,8 +11,19 @@
   </head>
 
   <body>
+    <%= render partial: 'shared/navigation' %>
+
     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= turbo_stream_from "flash" %>
+    <div id="flash-messages">
+      <% if flash.empty? %>
+        <div class="alert" style>&nbsp;</div>
+      <% end %>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>

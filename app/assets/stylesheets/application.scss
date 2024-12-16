@@ -1,1 +1,40 @@
 @import "bootstrap";
+
+body {
+  background: #DCF6FA;
+}
+
+.container-widest {
+  max-width: 1350px;
+}
+
+.container-wide {
+  max-width: 950px;
+  padding-bottom: 80px;
+}
+
+.container-right-alignment {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.container-narrow {
+  max-width: 500px;
+}
+
+table, thead, tbody, tr, th, td {
+  border: 2px solid #000000; /* Replace #000000 with your desired color */
+}
+
+.absolute-centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Optional for visual clarity */
+  width: 700px;
+  text-align: center;
+
+  padding: 20px;
+}
