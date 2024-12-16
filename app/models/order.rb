@@ -6,6 +6,11 @@
 #  amount     :decimal(12, 2)   not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :bigint           not null
+#
+# Indexes
+#
+#  index_orders_on_user_id  (user_id)
 #
 class Order < ApplicationRecord
   validates :amount, presence: true
