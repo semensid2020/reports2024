@@ -1,3 +1,10 @@
+# Generate Users
+admin = User.find_or_initialize_by(email: 'admin@example.com')
+admin.update(
+  password: 'password',
+  password_confirmation: 'password',
+)
+
 order1  = Order.create(amount: 1000)
 order2  = Order.create(amount: 2000)
 order3  = Order.create(amount: 3000)

@@ -1,9 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe PreservationsController, type: :controller do
+  include Devise::Test::ControllerHelpers
+
+  let(:user) { create(:user) }
   let(:valid_attributes) { { initial_file_link: 'https://example.com/file.pdf' } }
   let(:invalid_attributes) { { initial_file_link: 'invalid-url' } }
   let(:preservation) { create(:preservation) }
+
+  before do
+    sign_in user
+  end
 
   describe 'GET #index' do
     it 'returns a success response' do

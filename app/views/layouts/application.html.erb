@@ -11,9 +11,8 @@
   </head>
 
   <body>
-    <%= render partial: 'shared/navigation' %>
+    <%= render partial: 'shared/navigation' if current_user %>
 
-    <p class="notice"><%= notice %></p>
     <%= turbo_stream_from "flash" %>
     <div id="flash-messages">
       <% if flash.empty? %>

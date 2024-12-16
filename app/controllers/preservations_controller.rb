@@ -1,4 +1,6 @@
 class PreservationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @preservations = Preservation.order(created_at: :desc)
   end

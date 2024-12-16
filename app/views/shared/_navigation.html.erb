@@ -1,4 +1,10 @@
-<div class="container container-wide" style="padding-top: 30px;padding-bottom: 0px;">
+<div class="container container-widest" style="padding-top: 30px;padding-bottom: 0px;">
+  <span style="padding-top: 8px;">
+    <%= "You are: #{current_user.email}" %>
+  </span>
+  <span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
   <span>
     <%= link_to 'All orders', orders_path, class: 'btn btn-primary btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
   </span>
