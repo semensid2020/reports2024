@@ -3,27 +3,33 @@
     <%= "You are: #{current_user.email}" %>
   </span>
   <span>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
   </span>
   <span>
     <%= link_to 'All orders', orders_path, class: 'btn btn-primary btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
   </span>
   <span>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
   </span>
   <span>
     <%= link_to 'Last 12 months orders', last_year_orders_path, class: 'btn btn-primary btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
   </span>
   <span>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
   </span>
   <span>
     <%= link_to 'Last 12 months (by months)', last_year_by_months_path, class: 'btn btn-primary btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
   </span>
   <span>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
   </span>
   <span>
-    <%= link_to 'Preservations', preservations_path, class: 'btn btn-primary btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
+    <%= link_to 'Preservations', preservations_path, class: 'btn btn-success btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
+  </span>
+  <span>
+    &nbsp;&nbsp;
+  </span>
+  <span>
+    <%= link_to 'Get report', get_report_path, class: 'btn btn-danger btn-lg mb-3', style: 'text-align: right', data: { turbo: false } %>
   </span>
 </div>

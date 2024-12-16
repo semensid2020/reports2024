@@ -20,6 +20,8 @@ RSpec.describe Api::OrdersController, type: :controller do
   end
 
   describe 'GET #last_year_by_months' do
+    let!(:user) { create(:user) }  # Create a valid user
+
     context 'with mock data' do
       let!(:order_data) do
         (0..14).map do |months_ago|
@@ -40,12 +42,12 @@ RSpec.describe Api::OrdersController, type: :controller do
       before do
         (0..14).each do |months_ago|
           travel_to Time.zone.now - months_ago.months do
-            create_list(:order, 20, amount: 100.00)
+            create_list(:order, 20, amount: 100.00, user: user)
           end
         end
 
         travel_to 1.year.ago do
-          create(:order, amount: 500.00)
+          create(:order, amount: 500.00, user: user)
         end
 
         travel_back

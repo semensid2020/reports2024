@@ -13,6 +13,7 @@
 #  index_orders_on_user_id  (user_id)
 #
 class Order < ApplicationRecord
+  belongs_to :user
   validates :amount, presence: true
 
   scope :within_last_year, lambda {

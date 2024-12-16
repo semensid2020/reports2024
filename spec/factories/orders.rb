@@ -15,6 +15,7 @@
 FactoryBot.define do
   factory :order do
     amount { 1000.00 }
+    user
     created_at { Time.zone.now }
   end
 end
