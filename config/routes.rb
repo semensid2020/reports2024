@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get 'last_year', to: 'orders#within_last_year', as: :last_year_orders
   get '/api/last_year_by_months', to: 'api/orders#last_year_by_months', as: :last_year_by_months
 
+  resources :preservations, only: %i[index show new create]
 end

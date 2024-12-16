@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_14_112111) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_15_185935) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_14_112111) do
     t.decimal "amount", precision: 12, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "preservations", force: :cascade do |t|
+    t.integer "status", default: 0, null: false
+    t.string "initial_file_link", null: false
+    t.string "preserved_file_link"
+    t.text "logs"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "initial_file"
+    t.string "name_of_initial_file"
+    t.string "verification_file"
+    t.string "name_of_verification_file"
   end
 
   create_table "users", force: :cascade do |t|

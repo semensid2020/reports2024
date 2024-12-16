@@ -1,0 +1,27 @@
+<div class="container container-widest">
+<%= link_to 'Back to all preservations', preservations_path, class: 'btn btn-primary btn-lg mb-3' %>
+<h1 class="mb-4">Preservation #<%= @preservation.id %></h1>
+</div>
+<div class="container container-widest">
+  <table class="table table-bordered table-striped mb-0" style="text-align: center">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th style="min-width: 400px">Initial file link</th>
+          <th style="min-width: 400px">Preserved file link</th>
+          <th>Logs</th>
+        </tr>
+    </thead>
+
+      <tbody>
+        <tr>
+          <td><%= @preservation.id %></td>
+          <td><%= @preservation.status %></td>
+          <td><%= @preservation.initial_file_link %></td>
+          <td><%= @preservation.preserved_file_link %></td>
+          <td><%= raw @preservation.logs.gsub("\n", "<br>").html_safe %></td>
+        </tr>
+      </tbody>
+  </table>
+</div>
