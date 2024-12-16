@@ -41,3 +41,8 @@ order40 = Order.create(amount: 20000.22)
 
 max_id = Order.maximum(:id)
 Order.find_each { |ord| ord.update(created_at: ord.created_at - (86400 * 13 * (max_id - ord.id))) }
+
+# Создаём несколько сохранений файлов (задание 2)
+Preservation.create(initial_file_link: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')
+Preservation.create(initial_file_link: 'https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB.pdf')
+Preservation.create(initial_file_link: 'https://www.orimi.com/pdf-test.pdf')

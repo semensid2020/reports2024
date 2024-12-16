@@ -1,0 +1,47 @@
+<div class="container container-widest">
+  <span>
+    <%= link_to 'New preservation', new_preservation_path, class: 'btn btn-primary btn-lg mb-3' %>
+  <span>
+</div>
+<div class="container container-widest">
+<% if @preservations.present? %>
+  <h1 class="mb-4">All preservations</h1>
+  <table class="table table-bordered table-striped mb-0" style="text-align: center">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th style="min-width: 400px">Initial file link</th>
+          <th style="min-width: 400px">Preserved file link</th>
+          <th>Logs</th>
+          <th style="max-width: 100px">Temp.file (local)</th>
+          <th>Created_at</th>
+          <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+      <% @preservations.each do |preservation| %>
+        <tr id="preservation_<%= preservation.id %>">
+          <td><%= preservation.id %></td>
+          <td><%= preservation.status %></td>
+          <td style="min-width: 400px"><%= preservation.initial_file_link %></td>
+          <td style="min-width: 400px"><%= preservation.preserved_file_link %></td>
+          <td><%= preservation.logs.present? ? 'Check preservs page' : 'No logs' %></td>
+          <td style="max-width: 100px">
+            <%= preservation.initial_file.present? && preservation.name_of_initial_file.present? ?
+                  link_to(preservation.name_of_initial_file, preservation.initial_file.url, download: preservation.name_of_initial_file) : 'нет' %>
+          </td>
+
+          <td><%= preservation.created_at %></td>
+          <td style="text-align: center; justify-content: space-around;">
+            <%= link_to 'Show', preservation_path(preservation), class: 'btn btn-success btn-lg mb-3' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h1 class="mb-4">No preservations so far</h1>
+<% end %>
+</div>
